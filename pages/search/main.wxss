@@ -1,0 +1,72 @@
+
+.topHead.data-v-0e369244 {
+  width: 100%;
+  height: 100rpx;
+  padding: 20rpx 16rpx;
+  background-color: #eeeeee;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+}
+.topHead .thinkbox.data-v-0e369244 {
+  position: absolute;
+  top: 80rpx;
+  left: 16rpx;
+  right: 16rpx;
+  box-sizing: border-box;
+  background-color: #ccc;
+}
+.topHead .thinkbox .think.data-v-0e369244 {
+  font-size: 32rpx;
+  line-height: 60rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.topHead .search.data-v-0e369244 {
+  width: 100%;
+  height: 60rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  padding-left: 70rpx;
+  font-size: 32rpx;
+  box-sizing: border-box;
+}
+.topHead ._button.data-v-0e369244 {
+  width: 160rpx;
+  height: 64rpx;
+  padding: 0;
+  line-height: 60rpx;
+  font-size: 32rpx;
+  margin-left: 20rpx;
+}
+.topHead .icon.data-v-0e369244 {
+  position: absolute;
+  top: 50%;
+  left: 30rpx;
+  transform: translate(0, -50%);
+}
+.bigbox.data-v-0e369244 {
+  width: 100%;
+  padding: 0 16rpx;
+  box-sizing: border-box;
+}
+.bigbox .title.data-v-0e369244 {
+  display: flex;
+  justify-content: space-between;
+  height: 88rpx;
+  line-height: 88rpx;
+}
+.bigbox .title icon.data-v-0e369244 {
+  margin-top: 25rpx;
+  margin-right: 20rpx;
+}
+.bigbox .list.data-v-0e369244 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.bigbox .list .item.data-v-0e369244 {
+  padding: 20rpx 25rpx;
+  background-color: #ddd;
+  margin: 0 30rpx 18rpx 0;
+}

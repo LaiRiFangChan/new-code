@@ -1,0 +1,87 @@
+page {
+  background-color: #f4f4f4;
+}
+
+.top {
+  height: 400rpx;
+  background-color: #ff2d4a;
+  text-align: center;
+  position: relative;
+}
+
+.top button {
+  position: absolute;
+  left: 50%;
+  bottom: 90rpx;
+  transform: translateX(-50%);
+  width: 200rpx;
+  height: 50rpx;
+  opacity: 0;
+}
+
+.top image {
+  margin-top: 100rpx;
+  width: 130rpx;
+  height: 130rpx;
+  border: 4rpx solid #fff;
+  border-radius: 50%;
+}
+
+.top .word {
+  margin-top: 20rpx;
+  color: #fff;
+}
+
+.box {
+  padding: 0 16rpx;
+}
+
+.store {
+  height: 80rpx;
+  padding: 20rpx 0;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  line-height: 40rpx;
+  margin-top: -30rpx;
+  position: relative;
+  z-index: 999;
+}
+
+.order {
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+
+.order .title {
+  height: 88rpx;
+  line-height: 88rpx;
+  padding-left: 30rpx;
+  border-bottom: 1px solid #ddd;
+}
+
+.order .option {
+  height: 166rpx;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.order .option .item {
+  margin-top: 40rpx;
+}
+
+.order .option text {
+  display: block;
+}
+
+.add {
+  margin-top: 20rpx;
+  height: 87rpx;
+  line-height: 87rpx;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 0rpx 30rpx;
+}

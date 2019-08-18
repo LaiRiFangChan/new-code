@@ -1,0 +1,46 @@
+<template name="7df2c308">
+  <view class="_div data-v-0d421dfc">
+    <view class="_div data-v-0d421dfc address">
+      <view wx:if="{{!addredss.userName}}" class="_div data-v-0d421dfc no-add"><label class="_span data-v-0d421dfc">没有地址</label> <label bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_span data-v-0d421dfc">></label></view>
+      <view wx:else class="_div data-v-0d421dfc yes-add">
+        <view class="_div data-v-0d421dfc msg"><label class="_span data-v-0d421dfc">收货人： {{ addredss.userName }}</label> <label class="_span data-v-0d421dfc">{{ addredss.telNumber }}
+            <text bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_text data-v-0d421dfc">></text></label></view>
+        <view class="_div data-v-0d421dfc addmsg">
+          {{ detailAddress }}
+        </view>
+      </view>
+      <image src="/static/icon/cart_border@2x(1).png" alt class="_img data-v-0d421dfc"></image>
+    </view>
+    <view class="_div data-v-0d421dfc goodsList">
+      <view class="_div data-v-0d421dfc top"> 优购生活馆 </view>
+      <view class="_div data-v-0d421dfc list">
+        <view class="_div data-v-0d421dfc item" wx:key="key" key="{{key}}" wx:for="{{goodsList}}" wx:for-index="key" wx:for-item="value">
+          <view class="_div data-v-0d421dfc left">
+            <icon bindtap="handleProxy" type="success" color="{{value.status ? 'red': 'gray'}}" data-eventid="{{'2_'+key}}" data-comkey="{{$k}}" class="_icon data-v-0d421dfc"></icon>
+          </view>
+          <view class="_div data-v-0d421dfc right">
+            <view class="_div data-v-0d421dfc img">
+              <image src="{{value.goods_small_logo}}" alt class="_img data-v-0d421dfc"></image>
+            </view>
+            <view class="_div data-v-0d421dfc word">
+              <view class="_div data-v-0d421dfc msg">
+                {{ value.goods_name }}
+              </view>
+              <view class="_div data-v-0d421dfc price">
+                <view class="_div data-v-0d421dfc money">￥{{ value.goods_price }}.00</view>
+                <view class="_div data-v-0d421dfc count"><label bindtap="handleProxy" data-eventid="{{'3_'+key}}" data-comkey="{{$k}}" class="_span data-v-0d421dfc">-</label> <input type="text" value="{{value.num}}" bindinput="handleProxy" data-eventid="{{'4_'+key}}" data-comkey="{{$k}}" class="_input data-v-0d421dfc" /> <label bindtap="handleProxy" data-eventid="{{'5_'+key}}" data-comkey="{{$k}}" class="_span data-v-0d421dfc">+</label></view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="_div data-v-0d421dfc bottom">
+      <view class="_div data-v-0d421dfc selAll">
+        <icon bindtap="handleProxy" type="success" color="{{selectAll ? 'red' : 'gray'}}" data-eventid="{{'6'}}" data-comkey="{{$k}}" class="_icon data-v-0d421dfc"></icon> <label class="_span data-v-0d421dfc">全选</label>
+      </view>
+      <view class="_div data-v-0d421dfc total"><label class="_span data-v-0d421dfc">合计: ￥{{total}}.00</label> <label class="_span data-v-0d421dfc">包运费</label></view>
+      <view class="_div data-v-0d421dfc pay"><button bindtap="handleProxy" data-eventid="{{'7'}}" data-comkey="{{$k}}" class="_button data-v-0d421dfc">结算({{totalNum}})</button></view>
+    </view>
+  </view>
+</template>

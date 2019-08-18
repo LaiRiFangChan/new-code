@@ -1,0 +1,59 @@
+<!-- 头部信息 -->
+<view class="top">
+  <image src="{{ myimg }}"></image>
+  <view class="word">{{ nickname }}</view>
+  <button bindgetuserinfo="fn" open-type="getUserInfo"></button>
+</view>
+<view class="box">
+  <!-- 店铺信息 -->
+  <view class="store">
+    <view class="item">
+      <text>0</text>
+      <view>我的店铺</view>
+    </view>
+    <view class="item">
+      <text>0</text>
+      <view>我的店铺</view>
+    </view>
+    <view class="item">
+      <text>0</text>
+      <view>我的店铺</view>
+    </view>
+    <view class="item">
+      <text>0</text>
+      <view>我的店铺</view>
+    </view>
+  </view>
+  <!-- 订单 -->
+  <view class="order">
+    <view class="title">我的订单</view>
+    <view class="option">
+      <view class="item" data-id="1" bindtap="foo">
+        <icon type="success"></icon>
+        <text>待付款</text>
+      </view>
+      <view class="item" data-id="2" bindtap="foo">
+        <icon type="success"></icon>
+        <text>待收货</text>
+      </view>
+      <view class="item" data-id="3" bindtap="foo">
+        <icon type="success"></icon>
+        <text>退货</text>
+      </view>
+      <view class="item" data-id="4" bindtap="foo">
+        <icon type="success"></icon>
+        <text>全部订单</text>
+      </view>
+    </view>
+  </view>
+  <!-- 收货地址 -->
+  <view class="add" bindtap="getAddress">
+    <text>{{ address }}</text>
+    <text>></text>
+  </view>
+  <!-- 联系客服 -->
+  <view class="add" bindtap="call">
+    <text>联系客服</text>
+    <text>400-618-4000</text>
+  </view>
+</view>

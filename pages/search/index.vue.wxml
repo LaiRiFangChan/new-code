@@ -1,0 +1,24 @@
+<template name="a7fe15e0">
+  <view class="_div data-v-0e369244">
+    <view class="_div data-v-0e369244 topHead"><input bindinput="handleProxy" bindconfirm="handleProxy" value="{{key}}" placeholder="请输入要搜索的内容" class="_input data-v-0e369244 search" type="search" data-eventid="{{'0'}}" data-comkey="{{$k}}" />
+      <view class="_div data-v-0e369244 thinkbox" wx:if="{{thinkList.length != 0}}">
+        <view bindtap="handleProxy" class="_div data-v-0e369244 think" wx:key="index" key="{{index}}" data-eventid="{{'1_'+index}}" data-comkey="{{$k}}" wx:for="{{thinkList}}" wx:for-index="index" wx:for-item="item">
+          {{item.goods_name}}
+        </view>
+      </view> <button bindtap="handleProxy" wx:if="{{key.length !== 0}}" data-eventid="{{'2'}}" data-comkey="{{$k}}" class="_button data-v-0e369244">取消</button>
+      <view class="_div data-v-0e369244 icon">
+        <icon type="search" size="20" class="_icon data-v-0e369244"></icon>
+      </view>
+    </view>
+    <view class="_div data-v-0e369244 bigbox">
+      <view class="_div data-v-0e369244 title"><label class="_span data-v-0e369244">搜索历史</label>
+        <icon bindtap="handleProxy" type="clear" size="16" data-eventid="{{'3'}}" data-comkey="{{$k}}" class="_icon data-v-0e369244"></icon>
+      </view>
+      <view class="_div data-v-0e369244 list">
+        <view bindtap="handleProxy" class="_div data-v-0e369244 item" wx:key="index" key="{{index}}" data-eventid="{{'4_'+index}}" data-comkey="{{$k}}" wx:for="{{searchList}}" wx:for-index="index" wx:for-item="item">
+          {{ item }}
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

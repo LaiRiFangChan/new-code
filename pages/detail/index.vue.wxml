@@ -1,0 +1,44 @@
+<template name="3a17af0e">
+  <view class="_div data-v-4529c5ad bigbox">
+    <swiper class="_swiper data-v-4529c5ad lb" indicator-dots autoplay interval="3000" duration="300" circular>
+      <swiper-item wx:key="index" key="{{index}}" wx:for="{{obj.pics}}" wx:for-index="index" wx:for-item="item" class="_swiper-item data-v-4529c5ad">
+        <image bindtap="handleProxy" mode="aspectFill" src="{{item.pics_big_url}}" data-eventid="{{'0_'+index}}" data-comkey="{{$k}}" class="_image data-v-4529c5ad"></image>
+      </swiper-item>
+    </swiper>
+    <view class="_div data-v-4529c5ad msg">
+      <view class="_div data-v-4529c5ad price"> ￥{{ obj.goods_price }}.00 </view>
+      <view class="_div data-v-4529c5ad word">
+        <view class="_div data-v-4529c5ad left">{{ obj.goods_name }}</view>
+        <view class="_div data-v-4529c5ad right">
+          <view class="_i data-v-4529c5ad iconfont icon-fenxiang"></view> 分享 <button open-type="share" class="_button data-v-4529c5ad"></button>
+        </view>
+      </view>
+      <view class="_div data-v-4529c5ad isSend">快递： 免运费</view>
+    </view>
+    <view class="_div data-v-4529c5ad chuxiao">
+      <view class="_div data-v-4529c5ad top"> 促销： <label class="_span data-v-4529c5ad color">满 300 减 30</label></view>
+      <view class="_div data-v-4529c5ad top"> 已选： <label class="_span data-v-4529c5ad">黑色/s/1件</label></view>
+    </view>
+    <view class="_div data-v-4529c5ad tab">
+      <view bindtap="handleProxy" class="_div data-v-4529c5ad item {{[itemIndex === 0 ? 'active' : '']}}" data-eventid="{{'1'}}" data-comkey="{{$k}}">图文介绍</view>
+      <view bindtap="handleProxy" class="_div data-v-4529c5ad item {{[itemIndex === 1 ? 'active' : '']}}" data-eventid="{{'2'}}" data-comkey="{{$k}}">规格参数</view>
+    </view>
+    <view class="_div data-v-4529c5ad content">
+      <rich-text wx:if="{{itemIndex === 0}}" class="_div data-v-4529c5ad jieshao" nodes="{{obj.goods_introduce}}"></rich-text>
+      <view wx:if="{{itemIndex === 1}}" class="_div data-v-4529c5ad canshu">
+        <view class="_div data-v-4529c5ad item" wx:key="index" key="{{index}}" wx:for="{{obj.attrs}}" wx:for-index="index" wx:for-item="item">
+          <view class="_div data-v-4529c5ad key">{{ item.attr_name }}</view>
+          <view class="_div data-v-4529c5ad value">{{ item.attr_value }}</view>
+        </view>
+      </view>
+    </view>
+    <view class="_div data-v-4529c5ad bottom">
+      <view class="_div data-v-4529c5ad start kefu">
+        <view class="_i data-v-4529c5ad iconfont icon-kefu"></view> 联系客服 <button open-type="contact" class="_button data-v-4529c5ad"></button>
+      </view>
+      <view bindtap="handleProxy" class="_div data-v-4529c5ad start" data-eventid="{{'3'}}" data-comkey="{{$k}}">
+        <view class="_i data-v-4529c5ad iconfont icon-gouwuche"></view> 购物车
+      </view> <button bindtap="handleProxy" class="_button data-v-4529c5ad end one" data-eventid="{{'4'}}" data-comkey="{{$k}}"> 加入购物车 </button> <button class="_button data-v-4529c5ad end two">立即购买</button>
+    </view>
+  </view>
+</template>

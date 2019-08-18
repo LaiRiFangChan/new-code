@@ -1,0 +1,27 @@
+<template name="12935a07">
+  <view class="_div data-v-bc3a960a">
+    <view class="_div data-v-bc3a960a topHead"><input bindtap="handleProxy" class="_input data-v-bc3a960a search" type="search" data-eventid="{{'0'}}" data-comkey="{{$k}}" />
+      <view class="_div data-v-bc3a960a icon">
+        <icon type="search" size="20" class="_icon data-v-bc3a960a"></icon> <label class="_span data-v-bc3a960a">搜索</label>
+      </view>
+    </view>
+    <swiper class="_swiper data-v-bc3a960a lunbo" indicator-dots autoplay interval="3000" duration="300" circular>
+      <swiper-item class="_swiper-item data-v-bc3a960a lb-item" wx:key="index" key="{{index}}" wx:for="{{lunboList}}" wx:for-index="index" wx:for-item="item">
+        <image src="{{item.image_src}}" class="_image data-v-bc3a960a slide-image"></image>
+      </swiper-item>
+    </swiper>
+    <view class="_div data-v-bc3a960a nav">
+      <view class="_div data-v-bc3a960a n-item" wx:key="index" key="{{index}}" wx:for="{{navList}}" wx:for-index="index" wx:for-item="item">
+        <image src="{{item.image_src}}" alt class="_img data-v-bc3a960a"></image> <label class="_span data-v-bc3a960a">{{ item.name }}</label>
+      </view>
+    </view>
+    <view class="_div data-v-bc3a960a floor" wx:key="index" key="{{index}}" wx:for="{{floorList}}" wx:for-index="index" wx:for-item="item">
+      <view class="_div data-v-bc3a960a title">
+        <image mode="scaleToFill" src="{{item.floor_title.image_src}}" alt class="_img data-v-bc3a960a"></image> <label class="_span data-v-bc3a960a">{{ item.floor_title.name }}</label>
+      </view>
+      <view class="_div data-v-bc3a960a f-item">
+        <image wx:key="index1" key="{{index1}}" src="{{item1.image_src}}" alt="{{item1.name}}" wx:for="{{item.product_list}}" wx:for-index="index1" wx:for-item="item1" class="_img data-v-bc3a960a"></image>
+      </view>
+    </view>
+  </view>
+</template>

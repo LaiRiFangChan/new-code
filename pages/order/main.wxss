@@ -1,0 +1,49 @@
+page {
+  background-color: #f4f4f4;
+}
+
+.orderitem {
+  margin-top: 20rpx;
+  padding: 0 20rpx;
+  background-color: #fff;
+}
+
+.orderitem .msg {
+  height: 260rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.orderitem .msg image {
+  width: 200rpx;
+  height: 200rpx;
+  margin-top: 30rpx;
+}
+
+.orderitem .msg .right {
+  flex: 1;
+}
+
+.orderitem .right .word {
+  margin: 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.orderitem .right .box {
+  padding: 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.orderitem .price {
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: right;
+  color: #aaa;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}

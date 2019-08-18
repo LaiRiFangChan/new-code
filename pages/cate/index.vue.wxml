@@ -1,0 +1,33 @@
+<template name="5820d712">
+  <view class="_div data-v-633eef6b">
+    <view class="_div data-v-633eef6b topHead"><input class="_input data-v-633eef6b search" type="search" />
+      <view class="_div data-v-633eef6b icon">
+        <icon type="search" size="20" class="_icon data-v-633eef6b"></icon> <label class="_span data-v-633eef6b">搜索</label>
+      </view>
+    </view>
+    <view class="_div data-v-633eef6b content">
+      <view class="_div data-v-633eef6b left">
+        <view class="_ul data-v-633eef6b">
+          <view bindtap="handleProxy" wx:key="index" key="{{index}}" data-eventid="{{'0_'+index}}" data-comkey="{{$k}}" wx:for="{{cateList}}" wx:for-index="index" wx:for-item="item" class="_li data-v-633eef6b {{[selectedIndex === index ? 'active' : '']}}">
+            {{ item.cat_name }}
+          </view>
+        </view>
+      </view>
+      <view class="_div data-v-633eef6b right">
+        <image class="_img data-v-633eef6b topImg" src="https://img.alicdn.com/tps/i4/TB1OKgFXvb2gK0jSZK9SuuEgFXa.jpg_q90_.webp" alt></image>
+        <view class="_div data-v-633eef6b item-box" wx:key="index" key="{{index}}" wx:for="{{contentList}}" wx:for-index="index" wx:for-item="item">
+          <view class="_div data-v-633eef6b title"><label class="_span data-v-633eef6b">/</label>
+            {{ item.cat_name }}
+            <label class="_span data-v-633eef6b">/</label></view>
+          <view class="_div data-v-633eef6b box">
+            <view class="_div data-v-633eef6b item" wx:key="index1" key="{{index1}}" wx:for="{{item.children}}" wx:for-index="index1" wx:for-item="item1">
+              <navigator url="{{'/pages/searchList/main?query=' + item1.cat_name}}" class="_a data-v-633eef6b">
+                <image src="{{'https://autumnfish.cn/wx/' + item1.cat_icon}}" alt class="_img data-v-633eef6b"></image> <label class="_span data-v-633eef6b">{{ item1.cat_name }}</label>
+              </navigator>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,30 @@
+<template name="5f9f334e">
+  <view class="_div data-v-09aea502">
+    <view class="_div data-v-09aea502 myHead" style=" {{('position:' + position + ';')}}">
+      <view class="_div data-v-09aea502 topHead"><input class="_input data-v-09aea502 search" value="{{query}}" bindinput="handleProxy" type="search" placeholder="搜索" data-eventid="{{'0'}}" data-comkey="{{$k}}" />
+        <view class="_div data-v-09aea502 icon">
+          <icon type="search" size="20" class="_icon data-v-09aea502"></icon>
+        </view>
+      </view>
+      <view class="_div data-v-09aea502 nav">
+        <view bindtap="handleProxy" class="_div data-v-09aea502 n-item {{[selectedIndex === index ? 'active' : '']}}" wx:key="index" key="{{index}}" data-eventid="{{'1_'+index}}" data-comkey="{{$k}}" wx:for="{{navList}}" wx:for-index="index" wx:for-item="item">
+          {{ item }}
+        </view>
+      </view>
+    </view>
+    <view class="_div data-v-09aea502 goodsList" style=" {{('margin-top:' + marginTop + ';')}}">
+      <navigator url="{{'/pages/detail/main?id=' + item.goods_id}}" class="_a data-v-09aea502 g-item" wx:key="index" key="{{index}}" wx:for="{{searchList}}" wx:for-index="index" wx:for-item="item">
+        <view class="_div data-v-09aea502 left">
+          <image src="{{item.goods_small_logo}}" alt class="_img data-v-09aea502"></image>
+        </view>
+        <view class="_div data-v-09aea502 right">
+          <view class="_div data-v-09aea502 word">
+            {{ item.goods_name }}
+          </view>
+          <view class="_div data-v-09aea502 price">￥ <label class="_span data-v-09aea502">{{ item.goods_price }}</label>.00</view>
+        </view>
+      </navigator>
+      <view wx:if="{{searchList.length === total}}" class="_div data-v-09aea502 bottomLine"> ---我是有底线的--- </view>
+    </view>
+  </view>
+</template>
